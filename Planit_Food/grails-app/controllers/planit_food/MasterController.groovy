@@ -2,9 +2,9 @@ package planit_food
 
 class MasterController {
 
-    def splash() 
+    def login() 
     {
-        render file: 'web-app/pages/splash.html', contentType: 'text/html'
+        render file: 'web-app/js/ng-app/views/login.html', contentType: 'text/html'
     }
     
     def register() { render file: 'web-app/pages/register.html', contentType: 'text/html' }
