@@ -9,7 +9,6 @@ class Phone {
     String id
     String name
     String snippet
-    String carrier
       
     static constraints = {
     }
