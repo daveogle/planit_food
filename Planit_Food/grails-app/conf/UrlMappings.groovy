@@ -7,7 +7,7 @@ class UrlMappings {
             }
         }
 
-         "/"(view:"/splash")
+        "/"(view:"/index")
         "/Register" ( controller:'Master', action:'register')
         
         "/Login" ( controller:'Master', action:'login')
