@@ -1,37 +1,12 @@
-/* 
- * The Login Controller clears the user credentials on load which logs the user out if they were logged in.
- */
-(function () {
-    'use strict';
- 
-    angular
-        .module('app')
-        .controller('LoginController', LoginController);
- 
-    LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
-    function LoginController($location, AuthenticationService, FlashService) {
-        var vm = this;
- 
-        vm.login = login;
- 
-        (function initController() {
-            // reset login status
-            AuthenticationService.ClearCredentials();
-        })();
- 
-        function login() {
-            vm.dataLoading = true;
-            AuthenticationService.Login(vm.username, vm.password, function (response) {
-                if (response.success) {
-                    AuthenticationService.SetCredentials(vm.username, vm.password);
-                    $location.path('/');
-                } else {
-                    FlashService.Error(response.message);
-                    vm.dataLoading = false;
-                }
-            });
-        };
-    }
- 
-})();
+var phonecatApp = angular.module('planitFood', []);
 
+phonecatApp.controller('PhoneListCtrl', function ($scope) {
+  $scope.phones = [
+    {'name': 'Nexus S',
+     'snippet': 'Fast just got faster with Nexus S.'},
+    {'name': 'Motorola XOOM™ with Wi-Fi',
+     'snippet': 'The Next, Next Generation tablet.'},
+    {'name': 'DAVE XOOM™',
+     'snippet': 'The Next, Next Generation tablet.'}
+  ];
+});
