@@ -1,0 +1,127 @@
+body {
+    background: #E8F5E9;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #af4c6c;
+    padding: 0.5em 1em;
+}
+
+section,
+h1 {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    display: block;
+    font-size: 34px;
+    line-height: 34px;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 2.5px;
+}
+
+#filter_bar {
+    display: flex;
+
+}
+
+#filter_buttons button {
+    width:110px;
+    margin: 16px;
+}
+
+.todo_item_complete {
+	color: #000;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00ff13, 0 0 30px #00ff13, 0 0 40px #00ff13, 0 0 50px #00ff13, 0 0 75px #00ff13;
+	letter-spacing: 5px;
+	font: 30px 'MisoRegular';
+}
+
+.todo_item_incomplete {
+	color: #000;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 75px #ff0000;
+	letter-spacing: 5px;
+	font: 30px 'MisoRegular';
+}
+
+.todo_item_incomplete:before {
+    content: "• ";
+    color: #e00e0e;
+}
+
+.todo_item_complete:before {
+    content: "• ";
+    color: #2e8a0f;
+}
+
+.button {
+  display: inline-block;
+  margin: 6px 11px;
+  margin-top: 6px;
+  margin-right: 1px;
+  margin-bottom: 6px;
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #af4c6c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #732f51}
+
+.button:active {
+  background-color: #c32574;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button_selected {
+    display: inline-block;
+    margin: 6px 11px;
+    margin-top: 6px;
+    margin-right: 1px;
+    margin-bottom: 6px;
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    background-color: #c32574;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#count-label {
+    margin:2%;
+}
+
+.ng-valid[required] {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
